@@ -557,6 +557,11 @@ module.exports = function(webpackEnv) {
                 'sass-loader'
               ),
             },
+            // Custom file-loader setting for yaml files that are used for translating.
+            {
+              loader: require.resolve('file-loader'),
+              test: /\.ya?ml$/,
+            },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
             // In production, they would get copied to the `build` folder.
