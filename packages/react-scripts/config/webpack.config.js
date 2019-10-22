@@ -559,7 +559,7 @@ module.exports = function(webpackEnv) {
             },
             // Custom file-loader setting for yaml files that are used for translating.
             {
-              loader: require.resolve('file-loader'),
+              loader: require.resolve('yaml-loader'),
               test: /\.ya?ml$/,
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
